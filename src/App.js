@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import Quiz from './components/Quiz';
+import HappyNewYear from './components/HappyNewYear';
 import './App.css';
 
 function App() {
+  const [quizCompleted, setQuizCompleted] = useState(false);
+
+  const handleQuizComplete = () => {
+    setQuizCompleted(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HappyNewYear />
+     
     </div>
   );
 }
